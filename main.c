@@ -148,7 +148,6 @@ int finaler(char* Inpur_array)
 
 int main()
 {
-	int k;
     FILE* file;
     file = fopen("input.txt", "r");
     if (file == NULL) 
