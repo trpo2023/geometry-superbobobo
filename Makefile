@@ -4,12 +4,12 @@ LIB_NAME = libgeometry
 CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I src -MP -MMD
 
-BIN_DIR = bin 
-OBJ_DIR = obj 
-SRC_DIR = src 
+BIN_DIR = bin
+OBJ_DIR = obj
+SRC_DIR = src
 
 APP_PATH = $(BIN_DIR)/$(APP_NAME)
-LIB_PATH = $(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/$(LIB_NAME).a 
+LIB_PATH = $(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/$(LIB_NAME).a
 
 SRC_EXT = cpp
 CC = g++
@@ -25,7 +25,6 @@ DEPS = $(APP_OBJECTS:.o=.d) $(LIB_OBJECTS:.o=.d)
 .PHONY: all
 all: $(APP_PATH)
 
-
 -include $(DEPS)
 
 $(APP_PATH): $(APP_OBJECTS) $(LIB_PATH)
@@ -36,7 +35,6 @@ $(LIB_PATH): $(LIB_OBJECTS)
 
 $(OBJ_DIR)/%.o: %.cpp
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
-
 
 .PHONY: clean
 clean:
