@@ -5,26 +5,21 @@ int FigurName(char* Inpur_array)
     char figure[7] = "circle";
     char arr[N];
     int k = 1;
-
-
-    for (size_t i = 0; i < strlen(Inpur_array); i++)
+	for (size_t i = 0; i < strlen(Inpur_array); i++)
     {
         if (Inpur_array[i] != '(')
         {
             arr[i] = Inpur_array[i];
         }
-
         else
         {
             break;
         }
     }
-
     if (strcmp(arr, figure) == 0)
     {
         k = 0;
     }
-
     return k;
 }
 
@@ -32,8 +27,6 @@ int FigurParametrs(char* Inpur_array)
 {
     int k = 0;
     int cnt = 0;
-
-
     for (size_t i = 7; Inpur_array[i] != ',' && i < strlen(Inpur_array); i++)
     {
         if ((Inpur_array[i] != '.' && Inpur_array[i] != ' ') && !(Inpur_array[i] >= 48 && Inpur_array[i] <= Y))
