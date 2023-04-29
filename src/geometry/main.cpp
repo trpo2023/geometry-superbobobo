@@ -1,11 +1,11 @@
-#include <func.h>
+#include <libgeometry/func.h>
 #include <iostream>
 #include <string>
 #include <vector>
 
 int main()
 {
-    std ::string path = "test";
+    std ::string path = "../test_data.txt";
     std ::vector<std ::string> str
             = dataFromFile(path); 
     int k = str.size();
