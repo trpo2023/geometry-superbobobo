@@ -1,4 +1,4 @@
-#include <func.h>
+#include <../LibGeometry/func.h>
 #include <iostream>
 #include <string>
 #include <vector>
